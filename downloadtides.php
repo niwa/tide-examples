@@ -1,5 +1,18 @@
 <?php
 
+/*   Script to fetch the tide data from NIWA's API (https://developer.niwa.co.nz/docs/tide-api)
+ *   
+ *   It downloads the high and low tides for each month between the given dates as JSON. 
+ * 
+ *   Check the docs for how to change the parameters to get different formats or more frequent data
+ *
+ *   If you have a valid php environment all you need to do is put your apikey into the script and run
+ *
+ *   php downloadtides.php
+ *	 
+ */
+
+
 $lat = -37.406;
 $long = 175.947;
 $apikey = ""; // Register for an API key at https://developer.niwa.co.nz
