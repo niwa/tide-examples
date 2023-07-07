@@ -34,8 +34,9 @@ while ($currentDate <= $endDate) {
     echo "Downloading " . $currentDate->format('M') . " " . $year . "\n"; 
     // Calculate the number of days in the current month
     $numberOfDays = $currentDate->format('t');
+    $dateString = $currentDate->format('Y-m-d');
     
-    $url = "https://api.niwa.co.nz/tides/data?lat=".$lat."&long=".$long."&datum=MSL&numberOfDays=".$numberOfDays."&apikey=".$apikey;
+    $url = "https://api.niwa.co.nz/tides/data?lat=".$lat."&long=".$long."&datum=MSL&numberOfDays=".$numberOfDays."&apikey=".$apikey."&startDate=".$dateString;
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
